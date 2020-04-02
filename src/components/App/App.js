@@ -1,24 +1,11 @@
 import React, { Component } from 'react';
-import Post from '../Post/Post'
-
-const Header = () => {
-  return (
-    <ul>
-      <li>Home</li>
-      <li>About</li>
-      <li>Profile</li>
-      <li>Sign Up</li>
-    </ul>
-  )
-}
+import Nav from '../Nav/Nav'
 
 class App extends Component {
   render() {
     return (
       <div className="app">
-        <Header />
-
-        <Post />
+        <Nav />
       </div>
     )
   }
