@@ -28,13 +28,15 @@ class LoginForm extends Component {
                         name="email"
                         checked={this.state.email}
                         placeholder="email"
-                        onChange={this.handleValueChange} />
-                    <input type="text"
+                        onChange={this.handleValueChange}
+                        className="input" />
+                    <input type="password"
                         name="password"
                         value={this.state.password}
                         placeholder="password"
-                        onChange={this.handleValueChange} />
-                    <input type="submit" value="Sign In" />
+                        onChange={this.handleValueChange}
+                        className="input" />
+                    <input className="submit" type="submit" value="Sign In" />
                 </form>
             </div>
         )
