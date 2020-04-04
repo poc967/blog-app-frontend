@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   width: 90%;
   margin: 0 auto;
@@ -5,7 +9,7 @@ body {
   font-family: 'Roboto Mono', monospace;
 }
 
-button {
+button, .submit {
   text-decoration: none;
   justify-content: space-evenly;
   align-items: center;
@@ -18,10 +22,26 @@ button {
   transition: 0.3s;
 }
 
-button:focus {
+button:focus, 
+.submit:focus, 
+input:focus {
   outline:0 !important; 
 }
 
-button:hover {
+button:hover, .submit:hover {
   background-color: whitesmoke;
+}
+
+input {
+  font-family: 'Roboto Mono', monospace;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
