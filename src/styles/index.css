@@ -20,6 +20,7 @@ button, .submit {
   min-width: 100px;
   font-size: 15px;
   transition: 0.3s;
+  border: none;
 }
 
 button:focus, 

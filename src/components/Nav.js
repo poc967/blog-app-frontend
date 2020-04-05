@@ -3,16 +3,8 @@ import '../styles/Nav.css'
 
 class Nav extends Component {
 
-    state = {
-        isSignedIn: true
-    }
-
-    handleLogIn = () => {
-        this.setState(prevState => {
-            return {
-                isSignedIn: !prevState.isSignedIn
-            }
-        })
+    toggleSignInStatus = (e) => {
+        this.props.handleLogIn(this.props.user.isSignedIn)
     }
 
     render() {
@@ -22,8 +14,8 @@ class Nav extends Component {
                 <nav>
                     <button>Home</button>
                     <button>About</button>
-                    <button>Profile</button>
-                    <button onClick={this.handleLogIn}>{this.state.isSignedIn ? 'Log Out' : 'Log In'}</button>
+                    <button>{this.props.user.isSignedIn ? 'Profile' : 'Sign Up'}</button>
+                    <button onClick={this.toggleSignInStatus}>{this.props.user.isSignedIn ? 'Log Out' : 'Log In'}</button>
                 </nav>
             </div>
         )
