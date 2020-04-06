@@ -21,14 +21,7 @@ class SignUpModal extends Component {
     }
 
     handleSubmit = (e) => {
-        const { firstName, lastName, email, password, confirmPassword } = this.state
-
         e.preventDefault()
-        if (firstName && lastName && email && password && confirmPassword) {
-            console.log('submitted')
-        } else {
-            console.log('missing fields')
-        }
     }
 
     render() {
@@ -40,26 +33,32 @@ class SignUpModal extends Component {
                         value={this.state.firstName}
                         placeholder="first name"
                         name="firstName"
+                        required
                         onChange={this.handleInputChange} />
                     <input type="text"
                         value={this.state.lastName}
                         placeholder="last name"
                         name="lastName"
+                        required
                         onChange={this.handleInputChange} />
                     <input type="text"
                         value={this.state.email}
                         placeholder="email"
                         name="email"
+                        pattern="^([\w\-\.]+)@((\[([0-9]{1,3}\.){3}[0-9]{1,3}\])|(([\w\-]+\.)+)([a-zA-Z]{2,4}))$"
+                        required
                         onChange={this.handleInputChange} />
                     <input type="password"
                         value={this.state.password}
                         placeholder="password"
                         name="password"
+                        required
                         onChange={this.handleInputChange} />
                     <input type="password"
                         value={this.state.confirmPassword}
                         placeholder="confirm password"
                         name="confirmPassword"
+                        required
                         onChange={this.handleInputChange} />
                     <input className="submit"
                         type="submit"

@@ -21,11 +21,6 @@ class LoginModal extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault()
-        if (this.state.email && this.state.password) {
-            //Handlerfunction will go here
-        } else {
-            console.log('not submitted')
-        }
     }
 
     render() {
@@ -38,13 +33,16 @@ class LoginModal extends Component {
                         checked={this.state.email}
                         placeholder="email"
                         onChange={this.handleValueChange}
-                        className="input" />
+                        className="input"
+                        pattern="^([\w\-\.]+)@((\[([0-9]{1,3}\.){3}[0-9]{1,3}\])|(([\w\-]+\.)+)([a-zA-Z]{2,4}))$"
+                        required />
                     <input type="password"
                         name="password"
                         value={this.state.password}
                         placeholder="password"
                         onChange={this.handleValueChange}
-                        className="input" />
+                        className="input"
+                        required />
                     <input className="submit"
                         type="submit"
                         value="Sign In" />

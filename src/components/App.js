@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Nav from './Nav'
 import LoginModal from './LoginModal';
 import SignUpModal from './SignUpModal'
+import Post from './Post'
 
 class App extends Component {
 
@@ -28,6 +29,7 @@ class App extends Component {
           handleLogIn={this.handleLogIn} />
         <LoginModal />
         <SignUpModal />
+
       </div>
     )
   }
