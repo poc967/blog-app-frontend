@@ -12,8 +12,9 @@
   background-size: cover;
 }
 
-.logIn, .signUp, .home {
+.logIn, .signUp, .home, .notFound {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
   min-height: calc(100vh - 130.88px - 46px);
