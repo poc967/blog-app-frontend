@@ -13,10 +13,10 @@ class Nav extends Component {
             <div className="header">
                 <h1 className="logo">Code Blog</h1>
                 <nav>
-                    <NavLink exact to="/"><button>Home</button></NavLink>
-                    <NavLink to="/about"><button>About</button></NavLink>
-                    <NavLink to="/signup"><button>{this.props.user.isSignedIn ? 'Profile' : 'Sign Up'}</button></NavLink>
-                    <NavLink to="/login"><button onClick={this.toggleSignInStatus}>{this.props.user.isSignedIn ? 'Log Out' : 'Log In'}</button></NavLink>
+                    <li><NavLink exact to="/">Home</NavLink></li>
+                    <li><NavLink to="/about">About</NavLink></li>
+                    <li><NavLink to="/signup">{this.props.user.isSignedIn ? 'Profile' : 'Sign Up'}</NavLink></li>
+                    <li><NavLink to="/login" onClick={this.toggleSignInStatus}>{this.props.user.isSignedIn ? 'Log Out' : 'Log In'}</NavLink></li>
                 </nav>
             </div >
         )
