@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { NavLink } from 'react-router-dom'
 import '../styles/Nav.css'
 
 class Nav extends Component {
@@ -12,12 +13,12 @@ class Nav extends Component {
             <div className="header">
                 <h1 className="logo">Code Blog</h1>
                 <nav>
-                    <button>Home</button>
-                    <button>About</button>
-                    <button>{this.props.user.isSignedIn ? 'Profile' : 'Sign Up'}</button>
-                    <button onClick={this.toggleSignInStatus}>{this.props.user.isSignedIn ? 'Log Out' : 'Log In'}</button>
+                    <NavLink exact to="/"><button>Home</button></NavLink>
+                    <NavLink to="/about"><button>About</button></NavLink>
+                    <NavLink to="/signup"><button>{this.props.user.isSignedIn ? 'Profile' : 'Sign Up'}</button></NavLink>
+                    <NavLink to="/login"><button onClick={this.toggleSignInStatus}>{this.props.user.isSignedIn ? 'Log Out' : 'Log In'}</button></NavLink>
                 </nav>
-            </div>
+            </div >
         )
     }
 }

@@ -1,48 +1,14 @@
 * {
   box-sizing: border-box;
+  font-family: 'Roboto Mono', monospace;
 }
 
 body {
-  width: 90%;
-  margin: 0 auto;
-  background-color: grey;
-  font-family: 'Roboto Mono', monospace;
+  margin: 0;
+  padding: 0;
 }
 
-button, .submit {
-  text-decoration: none;
-  justify-content: space-evenly;
-  align-items: center;
-  background-color: rgba(169, 169, 169, 0.5);
-  border-radius: 5px;
-  margin: 10px;
-  font-family: 'Roboto Mono', monospace;
-  min-width: 100px;
-  font-size: 15px;
-  transition: 0.3s;
-  border: none;
-}
-
-button:focus, 
-.submit:focus, 
-input:focus {
-  outline:0 !important; 
-}
-
-button:hover, .submit:hover {
-  background-color: whitesmoke;
-}
-
-input {
-  font-family: 'Roboto Mono', monospace;
-  border: none;
-  border-radius: 5px;
-  padding: 5px;
-  margin: 5px;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+html,
+body {
+  height: 100%;
 }
