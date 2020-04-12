@@ -26,27 +26,29 @@ class LoginModal extends Component {
     render() {
         return (
             <div className="logIn">
-                <h2>Log In</h2>
-                <form onSubmit={this.handleSubmit}>
-                    <input type="text"
-                        name="email"
-                        checked={this.state.email}
-                        placeholder="email"
-                        onChange={this.handleValueChange}
-                        className="input"
-                        pattern="^([\w\-\.]+)@((\[([0-9]{1,3}\.){3}[0-9]{1,3}\])|(([\w\-]+\.)+)([a-zA-Z]{2,4}))$"
-                        required />
-                    <input type="password"
-                        name="password"
-                        value={this.state.password}
-                        placeholder="password"
-                        onChange={this.handleValueChange}
-                        className="input"
-                        required />
-                    <input className="submit"
-                        type="submit"
-                        value="Sign In" />
-                </form>
+                <div className="logInForm">
+                    <h2>Log In</h2>
+                    <form onSubmit={this.handleSubmit}>
+                        <input type="text"
+                            name="email"
+                            checked={this.state.email}
+                            placeholder="email"
+                            onChange={this.handleValueChange}
+                            className="input"
+                            pattern="^([\w\-\.]+)@((\[([0-9]{1,3}\.){3}[0-9]{1,3}\])|(([\w\-]+\.)+)([a-zA-Z]{2,4}))$"
+                            required />
+                        <input type="password"
+                            name="password"
+                            value={this.state.password}
+                            placeholder="password"
+                            onChange={this.handleValueChange}
+                            className="input"
+                            required />
+                        <input className="submit"
+                            type="submit"
+                            value="Sign In" />
+                    </form>
+                </div>
             </div>
         )
     }

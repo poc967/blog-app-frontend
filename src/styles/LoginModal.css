@@ -1,7 +1,6 @@
-.logIn, .signUp {
+.logInForm, .signUpForm {
     border: solid black 5px;
     width: 50%;
-    margin: 5% auto;
     border-radius: 15px;
     font-family: 'Roboto Mono', monospace;
     display: flex;
@@ -13,8 +12,12 @@
   background-size: cover;
 }
 
-.logIn {
-    background-color: rgba(255, 99, 71, 0.75);
+.logIn, .signUp, .home {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  min-height: calc(100vh - 130.88px - 46px);
+  overflow-y: auto;
 }
 
 
