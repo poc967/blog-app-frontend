@@ -5,6 +5,11 @@
     padding: 5px;
 }
 
+.logo a {
+    text-decoration: none;
+    color:black;
+}
+
 .header {
     border-bottom: solid black 5px;
     margin: 0;
@@ -16,9 +21,11 @@
 
 nav {
     display: flex;
+    flex-wrap: wrap;
+    flex-basis: 0.5;
     justify-content: space-evenly;
     align-items: center;
-    width: 40%;
+    width: 50%;
 }
 
 nav li {

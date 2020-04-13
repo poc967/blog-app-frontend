@@ -5,6 +5,7 @@ import '../styles/App.css'
 //import required components
 import Nav from './Nav'
 import Home from './Home'
+import Posts from './Posts'
 import SignUpModal from './SignUpModal'
 import LogInModal from './LoginModal'
 import Footer from './Footer'
@@ -37,6 +38,7 @@ class App extends Component {
             handleLogIn={this.handleLogIn} />
           <Switch>
             <Route exact path='/' component={Home} />
+            <Route exact path='/blog' component={Posts} />
             {/* <Route path='/about' component={About} /> */}
             <Route path='/signup' component={SignUpModal} />
             <Route path='/login' component={LogInModal} />

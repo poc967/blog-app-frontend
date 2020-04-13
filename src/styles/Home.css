@@ -3,4 +3,7 @@
     min-height: 100vh;
     margin: 0;
     padding: 0;
+    background:
+  lightblue url("../images/bridge.jpg") no-repeat center;
+  background-size: cover;
 }
