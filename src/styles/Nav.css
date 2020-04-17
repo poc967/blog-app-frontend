@@ -3,26 +3,48 @@
     border: solid black 5px;
     border-radius: 15px;
     padding: 5px;
+    margin: 0;
+}
+
+.logo a {
+    text-decoration: none;
+    color:black;
 }
 
 .header {
-    border-bottom: solid black 5px;
+    border-bottom: solid black 1px;
     margin: 0;
     padding: 10px;
     display: flex;
     justify-content: space-between;
-    background-color: rgba(255, 99, 71, 0.75);
+    background-color: rgb(0, 128, 255)
 }
-
-button {
-    height: 50%;
-    align-self: center;
-}
-
+ 
 nav {
     display: flex;
+    flex-wrap: wrap;
+    flex-basis: 0.5;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50%;
+}
+
+nav li {
+    list-style: none;
+}
+
+li a {
+    text-decoration: none;
+    font-size: 1.15em;
+    border-radius: 5px;
+    transition: 0.3s;
+    color: black;
+}
+
+li a:hover {
+    color: whitesmoke;
 }
 
 .active {
-    background-color: teal;
+    color: whitesmoke;
 }

@@ -1,8 +1,7 @@
 .logInForm, .signUpForm {
-    border: solid black 5px;
+    border: solid black 1px;
     width: 50%;
     border-radius: 15px;
-    font-family: 'Roboto Mono', monospace;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -10,17 +9,15 @@
     background:
   lightblue url("../images/bridge.jpg") no-repeat center;
   background-size: cover;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.logIn, .signUp, .home, .notFound {
+.logIn, .signUp, .home, .notFound, .posts {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  min-height: calc(100vh - 130.88px - 46px);
+  min-height: calc(100vh - 88px);
   overflow-y: auto;
+  background-color: white;
 }
-
-
-
-
