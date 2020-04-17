@@ -1,20 +1,24 @@
 import React from 'react'
 import Post from './Post'
-import { postsList } from '../data/posts'
 
 const Posts = (props) => {
 
+    const postsList = props.posts
+
     let post = postsList.map((post) => {
-        return <Post title={post.title}
+        return <Post key={post._id}
+            title={post.title}
             author={post.author}
             category={post.category}
-            body={post.body} />
+            body={post.post} />
     })
 
     return (
-        <ul className="posts">
-            {post}
-        </ul>
+        <div className="posts">
+            <ul >
+                {post}
+            </ul>
+        </div>
     )
 }
 

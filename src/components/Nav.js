@@ -4,10 +4,6 @@ import '../styles/Nav.css'
 
 class Nav extends Component {
 
-    toggleSignInStatus = (e) => {
-        this.props.handleLogIn(this.props.user.isSignedIn)
-    }
-
     render() {
         return (
             <div className="header">
@@ -16,8 +12,8 @@ class Nav extends Component {
                     <li><NavLink exact to="/">Home</NavLink></li>
                     <li><NavLink to="/about">About</NavLink></li>
                     <li><NavLink to="/blog">Blog</NavLink></li>
-                    <li><NavLink to="/signup">{this.props.user.isSignedIn ? 'Profile' : 'Sign Up'}</NavLink></li>
-                    <li><NavLink to="/login" onClick={this.toggleSignInStatus}>{this.props.user.isSignedIn ? 'Log Out' : 'Log In'}</NavLink></li>
+                    <li><NavLink to="/signup">Sign Up</NavLink></li>
+                    <li><NavLink to="/login">Log In</NavLink></li>
                 </nav>
             </div >
         )

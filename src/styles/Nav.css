@@ -3,6 +3,7 @@
     border: solid black 5px;
     border-radius: 15px;
     padding: 5px;
+    margin: 0;
 }
 
 .logo a {
@@ -11,14 +12,14 @@
 }
 
 .header {
-    border-bottom: solid black 5px;
+    border-bottom: solid black 1px;
     margin: 0;
     padding: 10px;
     display: flex;
     justify-content: space-between;
-    background-color: rgba(255, 99, 71, 0.75);
+    background-color: rgb(0, 128, 255)
 }
-
+ 
 nav {
     display: flex;
     flex-wrap: wrap;
@@ -34,20 +35,16 @@ nav li {
 
 li a {
     text-decoration: none;
-    font-size: 1.5em;
-    padding: 20px;
+    font-size: 1.15em;
     border-radius: 5px;
     transition: 0.3s;
-}
-
-li a:visited {
     color: black;
 }
 
 li a:hover {
-    background-color: whitesmoke;
+    color: whitesmoke;
 }
 
 .active {
-    background-color: whitesmoke;
+    color: whitesmoke;
 }

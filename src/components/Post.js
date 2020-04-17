@@ -4,10 +4,9 @@ import '../styles/Post.css'
 const Post = (props) => {
     return (
         <li>
-            <h1>{props.title}</h1>
-            <h2>{props.author}</h2>
-            <h2>{props.category}</h2>
-            <p>{props.body}</p>
+            <h2>{props.title}</h2>
+            <h3>By: {props.author}</h3>
+            <p><strong>{props.category} </strong>{props.body}</p>
         </li>
     )
 }

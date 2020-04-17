@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import '../styles/App.css'
+import axios from 'axios'
 
 //import required components
 import Nav from './Nav'
@@ -13,9 +14,20 @@ import NotFound from './NotFound'
 
 class App extends Component {
 
-  state = {
-    user:
-      { isSignedIn: false }
+  constructor() {
+    super()
+    this.state = {
+      posts: []
+    }
+  }
+
+  async componentDidMount() {
+    const response = await axios.get('http://localhost:8080/posts')
+    console.log(response)
+
+    this.setState({
+      posts: response.data
+    })
   }
 
   handleLogIn = () => {
@@ -38,7 +50,7 @@ class App extends Component {
             handleLogIn={this.handleLogIn} />
           <Switch>
             <Route exact path='/' component={Home} />
-            <Route exact path='/blog' component={Posts} />
+            <Route exact path='/blog' render={() => <Posts posts={this.state.posts} />} />
             {/* <Route path='/about' component={About} /> */}
             <Route path='/signup' component={SignUpModal} />
             <Route path='/login' component={LogInModal} />
