@@ -1,24 +1,9 @@
-.posts ul {
+.postFooter {
     display: flex;
-    align-items: normal;
+    flex-direction: row;
     justify-content: space-evenly;
-    flex-direction: column;
-    width: 90%;
-    padding: 0;
 }
 
-.posts li {
-    list-style-type: none;
-    border: solid black 1px;
-    border-radius: 15px;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    padding: 1em;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.post {
-    width: 90%;
-    border: solid black 5px;
-    border-radius: 15px;
+.postFooter button {
+    width: 25%;
 }
