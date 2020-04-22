@@ -17,7 +17,7 @@
     padding: 10px;
     display: flex;
     justify-content: space-between;
-    background-color: rgb(0, 128, 255)
+    background-color: rgb(0, 128, 255);
 }
  
 nav {
@@ -36,7 +36,6 @@ nav li {
 li a {
     text-decoration: none;
     font-size: 1.15em;
-    border-radius: 5px;
     transition: 0.3s;
     color: black;
 }

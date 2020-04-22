@@ -22,6 +22,7 @@ class SignUpModal extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault()
+
     }
 
     render() {

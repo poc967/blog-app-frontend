@@ -6,7 +6,7 @@ import axios from 'axios'
 //import required components
 import Nav from './Nav'
 import Home from './Home'
-import Posts from './Posts'
+import Blog from './Blog'
 import SignUpModal from './SignUpModal'
 import LogInModal from './LoginModal'
 import Footer from './Footer'
@@ -40,6 +40,12 @@ class App extends Component {
     })
   }
 
+  handlePostDelete = (id) => {
+    console.log(id)
+
+    return axios.delete(`http://localhost:8080/posts/${id}`)
+  }
+
   render() {
     return (
       <div className="app">
@@ -50,7 +56,8 @@ class App extends Component {
             handleLogIn={this.handleLogIn} />
           <Switch>
             <Route exact path='/' component={Home} />
-            <Route exact path='/blog' render={() => <Posts posts={this.state.posts} />} />
+            <Route path='/blog' render={() => <Blog posts={this.state.posts}
+              handlePostDelete={this.handlePostDelete} />} />
             {/* <Route path='/about' component={About} /> */}
             <Route path='/signup' component={SignUpModal} />
             <Route path='/login' component={LogInModal} />
