@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import axios from "axios"
 import '../styles/LoginModal.css'
 
 class LoginModal extends Component {
@@ -9,9 +10,8 @@ class LoginModal extends Component {
     }
 
     handleValueChange = (e) => {
-        const target = e.target
-        const value = target.name === 'email' ? target.value : target.value
-        const key = target.name
+        const value = e.target.value
+        const key = e.target.name
         console.log(e.target.value)
 
         this.setState({
@@ -21,6 +21,18 @@ class LoginModal extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault()
+
+        const { email, password } = this.state
+
+        axios.post('http://localhost:8080/users/login', {
+            email, password
+        })
+
+            .then(response => {
+                console.log(response)
+                return response
+            })
+            .then(() => this.setState({ email: '', password: '' }))
     }
 
     render() {
